@@ -1,0 +1,155 @@
+*{box-sizing: border-box;}
+
+body{
+    margin-top: 0;
+}
+.wrapper{
+    max-width: 320px;
+    font-family: 'Lora', sans-serif;
+    margin: auto;
+    color: #a2a2a2;
+    
+}
+header{
+    border-bottom: 5px solid black; 
+}
+header > h1{
+    text-align: center;
+    background-color: black;
+    color:  white;
+    padding: 30px;
+    text-transform: uppercase;
+    font-size: 20px;margin-top: 0;
+}
+header > h2,
+header > p{
+    text-align: center;
+    margin: 0 15px 30px 15px;
+    
+}
+h2 {
+    color: black;
+}
+
+
+input[value="Required"]{
+    color: #bebebe;
+}
+
+.content,
+.asideCont{
+    border-top: 2px solid black;
+    margin-top: 5px;
+}
+
+input, 
+textarea,
+select{
+    background: #f2f2f2;
+    color: #a2a2a2;
+}
+
+
+.mainCont > input,
+.mainCont > select{
+    border: none;
+    height: 40px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 320px;
+}
+.mainCont > input[id="zip_code"]{
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.asideCont > label[for=""],
+.asideCont > button{
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.asideCont > button{
+    padding: 15px;
+    font-size: 20px;
+    background-color: #53bab3;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+.asideCont > h2{
+    margin-bottom: 0;
+}
+.asideCont > textarea {
+    border-radius: 5px;
+    height: 100px;
+    border: none;
+}
+
+
+form{
+    max-width: 320px;
+}
+footer{
+    margin: auto;
+    font-style: italic;
+}
+
+/* Flex */
+
+.mainCont,
+.asideCont{
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.mainCont{
+    flex-direction: column;
+}
+
+.asideCont > input[type="checkbox"],
+.asideCont > input[type="radio"]{
+    flex: none;
+    margin-bottom: 10px;
+}
+
+.asideCont > label[for="html"],
+.asideCont > label[for="css"],
+.asideCont > label[for="javascript"],
+.asideCont > label[for="plain"],
+.asideCont > label[for="HTML"]{
+    flex-basis: 250px;
+    
+}
+
+.asideCont > label,
+.asideCont > input,
+.asideCont > textarea,
+.asideCont > button{
+    flex-basis: 320px;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
