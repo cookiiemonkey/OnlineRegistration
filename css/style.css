@@ -7,15 +7,15 @@ body{
     max-width: 320px;
     font-family: 'Lora', sans-serif;
     margin: auto;
-    color: #a2a2a2;
-    
+    color: #06840b;
 }
+
 header{
-    border-bottom: 5px solid black; 
+    border-bottom: 5px solid #06840b; 
 }
-header > h1{
+ h1{
     text-align: center;
-    background-color: black;
+    background-color: #06840b;
     color:  white;
     padding: 30px;
     text-transform: uppercase;
@@ -25,20 +25,14 @@ header > h2,
 header > p{
     text-align: center;
     margin: 0 15px 30px 15px;
-    
 }
-h2 {
-    color: black;
-}
-
-
-input[value="Required"]{
-    color: #bebebe;
+header > p {
+    color: #aca6a6;
 }
 
 .content,
 .asideCont{
-    border-top: 2px solid black;
+    border-top: 2px solid #06840b;
     margin-top: 5px;
 }
 
@@ -46,9 +40,7 @@ input,
 textarea,
 select{
     background: #f2f2f2;
-    color: #a2a2a2;
 }
-
 
 .mainCont > input,
 .mainCont > select{
@@ -60,10 +52,11 @@ select{
 }
 .mainCont > input[id="zip_code"]{
     margin-bottom: 20px;
-    width: 50%;
+    width: 100px;
+    text-align: center;
 }
 
-.asideCont > label[for=""],
+.asideCont > .titleLabel,
 .asideCont > button{
     margin-bottom: 10px;
     margin-top: 20px;
@@ -85,6 +78,9 @@ select{
     border: none;
 }
 
+input[placeholder]{
+    text-align: right;
+}
 
 form{
     max-width: 320px;
@@ -92,6 +88,28 @@ form{
 footer{
     margin: auto;
     font-style: italic;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+  transition-property: background-color;
+  transition-duration: 1s;
+}
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus{
+    border: solid 2px black;
+    padding: 10px;
+    text-align: left;
+    background-color: #06840b;
+    color: white;
+    
 }
 
 /* Flex */
@@ -116,9 +134,8 @@ footer{
 .asideCont > label[for="css"],
 .asideCont > label[for="javascript"],
 .asideCont > label[for="plain"],
-.asideCont > label[for="HTML"]{
-    flex-basis: 250px;
-    
+.asideCont > label[for="radioHtml"]{
+    flex-basis: 250px; 
 }
 
 .asideCont > label,
@@ -129,7 +146,93 @@ footer{
     margin-left: 20px;
 }
 
+/* MEDIA QUERY */
 
+@media (min-width: 768px){
+    .wrapper {
+        max-width: 100vw;
+    }
+    
+    header,
+    .content,
+    h2,
+    header > p{
+        width: 500px;
+        margin: auto;
+        
+    }
+    header {
+        padding-bottom: 20px;
+        margin-bottom: 5px;
+    }
+    
+    h1 {
+        height: 50px;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    h2 {
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+    
+    .mainCont,
+    .asideCont{
+        width: 500px;
+        flex-direction: row;
+    }
+    
+    .asideCont > input {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    
+    .asideCont > label,
+    .asideCont > textarea,
+    .asideCont > button{
+        margin-left: 0;
+        flex-basis: 500px;
+    }
+    
+    .asideCont > label[for=" "]{
+        flex-basis: 500px;
+    }
+    .asideCont > label[for="html"],
+    .asideCont > label[for="css"],
+    .asideCont > label[for="javascript"],
+    .asideCont > label[for="plain"],
+    .asideCont > label[for="radioHtml"]{
+        flex-basis: 460px;
+    }
+    
+    .mainCont > label {
+        flex-basis: 150px; 
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
 
 
 

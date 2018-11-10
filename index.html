@@ -11,8 +11,8 @@
 
 <body>
     <div class="wrapper">
+        <h1>The code review</h1>
         <header>
-            <h1>The code review</h1>
             <h2>Signup for our newsletter</h2>
             <p>Get the lastest on how your code is doing right in your box</p>
         </header>
@@ -21,13 +21,13 @@
             <form>
                 <div class="mainCont">
                     <label for="user_name">Full Name</label>
-                    <input type="text" id="user_name">
+                    <input type="text" id="user_name" placeholder="Required">
 
                     <label for="email">Email Address</label>
-                    <input type="e-mail" id="email">
+                    <input type="email" id="email" placeholder="Required">
 
-                    <label for="p_number">Phone numer</label>
-                    <input type="text" id="p_number">
+                    <label for="user_tel">Phone numer</label>
+                    <input type="tel" id="user_tel">
 
                     <label for="street_adress">Street Adress</label>
                     <input type="text" id="street_adress">
@@ -44,7 +44,7 @@
                     </select>
 
                     <label for="zip_code">Zip Code</label>
-                    <input type="text" id="zip_code">
+                    <input type="text" id="zip_code" placeholder="0000">
 
                 </div><!-- END MAIN CONT -->
 
@@ -52,18 +52,17 @@
 
                     <h2>Newletter</h2>
 
-                    <label for="">Select the newssletter you would like to recieve</label>
-                    <input type="checkbox" id="html" value="HtmlNews"><label for="html">HTML News</label>
-                    <input type="checkbox" id="css" value="CssNews"><label for="css">CSS News</label>
-                    <input type="checkbox" id="javascript" value="JavascriptNews"><label for="javascript">Javascript News</label><br>
+                    <label class="titleLabel">Select the newssletter you would like to recieve</label>
+                    <input type="checkbox" id="html" name="checknews" value="HtmlNews"><span class="checkmark"></span><label for="html">HTML News</label>
+                    <input type="checkbox" id="css" name="checknews" value="CssNews"><label for="css">CSS News</label>
+                    <input type="checkbox" id="javascript" name="checknews" value="JavascriptNews"><label for="javascript">Javascript News</label>
 
+                    <label class="titleLabel">Newsletter format</label>
+                    <input type="radio" id="radioHtml" name="news" value="radioHtml"><label for="radioHtml">HTML</label>
+                    <input type="radio" id="plain" name="news" value="plains"><label for="plain">Plain text</label>
 
-                    <label for="">Newsletter format</label>
-                    <input type="radio" id="html" value="HTML"><label for="HTML">HTML</label>
-                    <input type="radio" id="plain" value="plains"><label for="plain">Plain text</label><br>
-
-                    <label for="">Other topics you'd like to hear about</label>
-                    <textarea name="topics" id="topics" ></textarea><br>
+                    <label class="titleLabel">Other topics you'd like to hear about</label>
+                    <textarea name="topics" id="topics"></textarea><br>
 
                     <button>Sign Up</button>
 
@@ -71,12 +70,8 @@
                         <p>Copyright The Code Review</p>
                     </footer>
                 </div> <!-- END ASIDE CONT -->
-
             </form>
         </div> <!-- END CONTENT -->
-
-
-
     </div><!-- END WRAPPER -->
 </body>
 
