@@ -17,17 +17,38 @@ header{
     text-align: center;
     background-color: #06840b;
     color:  white;
-    padding: 30px;
     text-transform: uppercase;
-    font-size: 20px;margin-top: 0;
+    font-size: 20px;
+    margin-top: 0;
 }
-header > h2,
+
+h2,
 header > p{
     text-align: center;
     margin: 0 15px 30px 15px;
+    
 }
 header > p {
     color: #aca6a6;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 1.2em;
+    padding: 30px 0;
+}
+
+textarea,
+button{
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px
 }
 
 .content,
@@ -42,53 +63,67 @@ select{
     background: #f2f2f2;
 }
 
-.mainCont > input,
-.mainCont > select{
+.mainCont > fieldset > input,
+.mainCont > fieldset > select{
     border: none;
     height: 40px;
     margin: 10px 0;
     border-radius: 5px;
     width: 320px;
 }
-.mainCont > input[id="zip_code"]{
+.mainCont > fieldset > input[id="zip_code"]{
     margin-bottom: 20px;
     width: 100px;
-    text-align: center;
 }
 
-.asideCont > .titleLabel,
-.asideCont > button{
-    margin-bottom: 10px;
-    margin-top: 20px;
+::placeholder {
+    text-align: right;
+    font-style: italic;
+    color: #BCBCBC;
+    padding-right: 10px;
+    
 }
-.asideCont > button{
+
+.asideCont > fieldset > .titleLabel{
+    margin: 20px 0;
+}
+.asideCont > fieldset > button{
     padding: 15px;
     font-size: 20px;
     background-color: #53bab3;
     color: white;
-    border-radius: 5px;
-    border: none;
 }
-.asideCont > h2{
-    margin-bottom: 0;
-}
-.asideCont > textarea {
-    border-radius: 5px;
+.asideCont > fieldset > textarea {
     height: 100px;
-    border: none;
 }
 
-input[placeholder]{
-    text-align: right;
+.asideCont > fieldset > label[for="html"],
+.asideCont > fieldset > label[for="css"],
+.asideCont > fieldset > label[for="javascript"],
+.asideCont > fieldset > label[for="plain"],
+.asideCont > fieldset > label[for="radioHtml"]{
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+.asideCont > fieldset > label[for="javascript"],
+.asideCont > fieldset > label[for="plain"]{
+    margin-bottom: 25px;
+}
+
+.asideCont > fieldset > label > input{
+    margin-right: 10px;
 }
 
 form{
     max-width: 320px;
 }
 footer{
-    margin: auto;
+    text-align: center;
     font-style: italic;
 }
+
+/* TRANSITION */
 
 input[type="text"],
 input[type="email"],
@@ -97,7 +132,6 @@ textarea{
   transition-property: background-color;
   transition-duration: 1s;
 }
-
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -112,38 +146,12 @@ select:focus{
     
 }
 
-/* Flex */
+/* FLEX */
 
-.mainCont,
-.asideCont{
-    display: flex;
-    flex-wrap: wrap; 
-}
-
+.asideFieldset,
 .mainCont{
-    flex-direction: column;
-}
-
-.asideCont > input[type="checkbox"],
-.asideCont > input[type="radio"]{
-    flex: none;
-    margin-bottom: 10px;
-}
-
-.asideCont > label[for="html"],
-.asideCont > label[for="css"],
-.asideCont > label[for="javascript"],
-.asideCont > label[for="plain"],
-.asideCont > label[for="radioHtml"]{
-    flex-basis: 250px; 
-}
-
-.asideCont > label,
-.asideCont > input,
-.asideCont > textarea,
-.asideCont > button{
-    flex-basis: 320px;
-    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* MEDIA QUERY */
@@ -159,7 +167,6 @@ select:focus{
     header > p{
         width: 500px;
         margin: auto;
-        
     }
     header {
         padding-bottom: 20px;
@@ -171,43 +178,26 @@ select:focus{
         padding: 10px;
         margin-bottom: 50px;
     }
-    h2 {
-        margin-bottom: 20px;
-        margin-top: 40px;
+    h2{
+        margin-bottom: 10px;
     }
     
     .mainCont,
     .asideCont{
         width: 500px;
-        flex-direction: row;
     }
     
-    .asideCont > input {
-        margin-left: 0;
-        margin-right: 10px;
+    .mainCont > fieldset > label{
+        display: inline-flex;
+        width: 110px;
+        margin-right: 15px;
+        
+    }
+    .mainCont > fieldset > input,
+    .mainCont > fieldset > select{
+       width: 370px;
     }
     
-    .asideCont > label,
-    .asideCont > textarea,
-    .asideCont > button{
-        margin-left: 0;
-        flex-basis: 500px;
-    }
-    
-    .asideCont > label[for=" "]{
-        flex-basis: 500px;
-    }
-    .asideCont > label[for="html"],
-    .asideCont > label[for="css"],
-    .asideCont > label[for="javascript"],
-    .asideCont > label[for="plain"],
-    .asideCont > label[for="radioHtml"]{
-        flex-basis: 460px;
-    }
-    
-    .mainCont > label {
-        flex-basis: 150px; 
-    }
 
     
 }

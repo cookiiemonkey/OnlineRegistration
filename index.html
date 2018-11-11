@@ -17,23 +17,27 @@
             <p>Get the lastest on how your code is doing right in your box</p>
         </header>
         <div class="content">
-            <h2>Contact information</h2>
             <form>
                 <div class="mainCont">
+                   <fieldset>
+                   
+                   <legend>Contact information</legend>
+                   
                     <label for="user_name">Full Name</label>
-                    <input type="text" id="user_name" placeholder="Required">
+                    <input type="text" id="user_name" name="user_name" placeholder="Required"><br>
+                    
 
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="Required">
+                    <input type="email" id="email" name="emaill" placeholder="Required"><br>
 
                     <label for="user_tel">Phone numer</label>
-                    <input type="tel" id="user_tel">
+                    <input type="tel" id="user_tel" name="user_tell"><br>
 
                     <label for="street_adress">Street Adress</label>
-                    <input type="text" id="street_adress">
+                    <input type="text" id="street_adress" name="strees" placeholder="Required"><br>
 
                     <label for="user_city">City</label>
-                    <input type="text" id="user_city">
+                    <input type="text" id="user_city" name="city"><br>
 
                     <label for="user_state">State</label>
                     <select id="user_state">
@@ -41,30 +45,38 @@
                         <option value="newyork">New York</option>
                         <option value="texas">Texas</option>
                         <option value="la">LA</option>
-                    </select>
+                    </select><br>
 
                     <label for="zip_code">Zip Code</label>
-                    <input type="text" id="zip_code" placeholder="0000">
-
+                    <input type="text" id="zip_code" name="zip">
+                    
+                    </fieldset>
                 </div><!-- END MAIN CONT -->
 
                 <div class="asideCont">
 
-                    <h2>Newletter</h2>
+                    <fieldset class="asideFieldset">
+                    <legend>Newletter</legend>
 
-                    <label class="titleLabel">Select the newssletter you would like to recieve</label>
-                    <input type="checkbox" id="html" name="checknews" value="HtmlNews"><span class="checkmark"></span><label for="html">HTML News</label>
-                    <input type="checkbox" id="css" name="checknews" value="CssNews"><label for="css">CSS News</label>
-                    <input type="checkbox" id="javascript" name="checknews" value="JavascriptNews"><label for="javascript">Javascript News</label>
+                    <label>Select the newssletter you would like to recieve</label>
+                    
+                    <label for="html"><input type="checkbox" id="html" name="checknews" value="HtmlNews">HTML News</label>
+                    
+                    <label for="css"><input type="checkbox" id="css" name="checknews" value="CssNews">CSS News</label>
+                    
+                    <label for="javascript"><input type="checkbox" id="javascript" name="checknews" value="JavascriptNews">Javascript News</label>
 
-                    <label class="titleLabel">Newsletter format</label>
-                    <input type="radio" id="radioHtml" name="news" value="radioHtml"><label for="radioHtml">HTML</label>
-                    <input type="radio" id="plain" name="news" value="plains"><label for="plain">Plain text</label>
+                    <label>Newsletter format</label>
+                    
+                    <label for="radioHtml"><input type="radio" id="radioHtml" name="news" value="radioHtml">HTML</label>
+                    
+                    <label for="plain"><input type="radio" id="plain" name="news" value="plains">Plain text</label>
 
                     <label class="titleLabel">Other topics you'd like to hear about</label>
-                    <textarea name="topics" id="topics"></textarea><br>
+                    <textarea name="topics" id="topics" name="topics"></textarea><br>
 
                     <button>Sign Up</button>
+                    </fieldset>
 
                     <footer>
                         <p>Copyright The Code Review</p>
